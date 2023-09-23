@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    background-color: rgb(176, 252, 55);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* SWICH */
+
+.switch-container {
+    display: flex;
+    align-items: left;
+    margin-left: 10px;
+    margin-bottom: 10px; 
+}
+
+.switch-input {
+    display: none;
+}
+
+.switch-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.switch-handle {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #66bb6a;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.switch-text {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.login-text, .signup-text {
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.login-text.active, .signup-text.active {
+    font-weight: bold;
+}
+
+.forms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    display: none;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+   /*  border: 1px solid #66bb6a; */
+    border-radius: 8px;
+    
+}
+
+.form.active {
+    display: block;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #66bb6a;
+    color: white;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #4caf50;
+}
+
+
+
+
+
+
+
+
+/* singup */
+/* #singUp {
+    width: 50%;
+    padding: 5px;
+    
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    
+    max-width: 600px;
+    width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    color: rgb(4, 78, 1);
+    font-weight: 700;
+}
+.inactive{
+    display: none;
+}
+
+button {
+    background-color: chartreuse;
+    color: cornsilk;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+}
+
+
+
+#registro-form label {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+*/
+
+#registro-form {
+    margin-top: 10px;
+    border: 2px solid rgb(27, 134, 0);    
+    width: 400px;
+    padding: 15px 30px;
+}
+#registro-form input {
+    width: 380px;
+    border: 1px solid rgb(35, 119, 1);
+    border-style: none none solid none;
+    border-width: 0 0 1px 0;
+    outline: none;
+    margin-bottom: 10px;
+    background-color: transparent;
+} 
+
+/* login */
+ #login-form {
+    border: 2px solid slateblue;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px 30px;
+}
+/*
+#login-form input {
+    width: 280px;
+    border: 1px solid seagreen;
+    border-radius: 5px;
+}
+
+#login-form label{
+    margin-top: 25px;
+    margin-bottom: 25px;
+} */
+
+.error__inactive{
+    display: none;
+}
+
+.check-active{
+    border: 4px solid green;
+}
+
+.check-error{
+    border: 4px solid red;
+}
+
+.error__nombre, .error__usuario, .error__password, .error__password2, .error__email, .error__ingreso {
+    display: none;
+    color: red;
+    padding-left: 12px;
+    gap: 10px;
+}
+
+.error-active{
+    display: flex;
+}
+
